@@ -24,4 +24,11 @@ public class HelloController {
     public  String  say(){
         return "Hello Spring Boot!"+girlProperties.getCupSize();
     }
+
+
+
+    @RequestMapping(value = "/index", method = RequestMethod.GET)
+    public  String index(){
+        return "index";
+    }
 }
