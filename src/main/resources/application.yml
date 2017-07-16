@@ -1,7 +1,3 @@
-server:
-  port: 8081
-  context-path: /goddress
-girl:
-  cupSize: A
-  age: 18
-  context: "cupSize:${cupSize}, age: ${age}"
+spring:
+  profiles:
+    active: prod
