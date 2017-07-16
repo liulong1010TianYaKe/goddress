@@ -3,15 +3,14 @@ package com.pafc;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by coco on 17/7/16.
  */
 
-@Controller
+@RestController
+@RequestMapping("/hello")
 public class HelloController {
 
     public HelloController() {
@@ -26,10 +25,15 @@ public class HelloController {
         return "Hello Spring Boot!"+girlProperties.getCupSize();
     }
 
-
-
-    @RequestMapping(value = "/index", method = RequestMethod.GET)
-    public  String index(){
-        return "index";
+    @GetMapping(value = "/say1")
+    public  String say1(@RequestParam(value = "id",required = false,defaultValue = 0) Integer myId){
+        return  "Say1"+myId;
     }
+
+
+
+//    @RequestMapping(value = "/index", method = RequestMethod.GET)
+//    public  String index(){
+//        return "index";
+//    }
 }
