@@ -26,7 +26,7 @@ public class HelloController {
     }
 
     @GetMapping(value = "/say1")
-    public  String say1(@RequestParam(value = "id",required = false,defaultValue = 0) Integer myId){
+    public  String say1(@RequestParam(value = "id",required = false) Integer myId){
         return  "Say1"+myId;
     }
 
