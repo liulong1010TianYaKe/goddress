@@ -1,3 +1,7 @@
 server:
   port: 8081
-  context-path: /godress
+  context-path: /goddress
+girl:
+  cupSize: A
+  age: 18
+  context: "cupSize:${cupSize}, age: ${age}"
